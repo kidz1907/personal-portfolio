@@ -1,0 +1,14 @@
+.hero {
+    background: #eee;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+  
+  .cta-btn {
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
