@@ -3,11 +3,14 @@
 export const timelineData = [
     {
       type: "work",
-      date: "2011 - present",
-      title: "Creative Director",
-      subtitle: "Miami, FL",
+      date: "08/2024 - present",
+      title: "Junior Full Stack Developer",
+      subtitle: "ReactJS, MongoDB(Cloud), Flutter, Firebase",
       description:
-        "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+      [
+        "In charge of the company website, I keep it updated with new features and information, as well as enhance the website.",
+        "I also converted it into a mobile version for better study convenience."
+      ],
       iconColor: "rgb(33, 150, 243)",
     },
     {
