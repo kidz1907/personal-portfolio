@@ -7,20 +7,19 @@ const WorkIcon = () => <></>;
 
 export default function Timeline() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor:'grey'}}>
       <h1>React Vertical Timeline</h1>
       <VerticalTimeline>
         {timelineData.map((item, index) => (
           <VerticalTimelineElement
             key={index}
             className={`vertical-timeline-element--${item.type}`}
-            date={item.date}
             contentStyle={{
               background: item.iconColor,
               color: "#fff",
             }}
             contentArrowStyle={{
-              borderRight: `7px solid ${item.iconColor}`,
+              borderRight: `15px solid ${item.iconColor}`,
             }}
             iconStyle={{
               background: item.iconColor,
@@ -28,9 +27,14 @@ export default function Timeline() {
             }}
             icon={<WorkIcon />}
           >
-            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+            <h3 className="vertical-timeline-element-title" style={{fontSize:'2em'}}>{item.title}</h3>
+            <p>{item.date}</p>
             <h4 className="vertical-timeline-element-skill">{item.skill}</h4>
-            <p>{item.description}</p>
+            <ul>
+            {item.description.map((desc, idx) => (
+          <li key={idx} style={{}}>{desc}</li>
+        ))}
+            </ul>
           </VerticalTimelineElement>
         ))}
         <VerticalTimelineElement
