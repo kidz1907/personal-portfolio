@@ -26,13 +26,14 @@ export default function Timeline() {
               color: "#fff",
             }}
             icon={<WorkIcon />}
+            
           >
             <h3 className="vertical-timeline-element-title" style={{fontSize:'2em'}}>{item.title}</h3>
             <p>{item.date}</p>
             <h4 className="vertical-timeline-element-skill">{item.skill}</h4>
-            <ul>
+            <ul className="text-start">
             {item.description.map((desc, idx) => (
-          <li key={idx} style={{}}>{desc}</li>
+          <li key={idx}>{desc}</li>
         ))}
             </ul>
           </VerticalTimelineElement>
