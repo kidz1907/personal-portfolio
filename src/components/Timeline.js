@@ -31,7 +31,18 @@ export default function Timeline() {
             <h3 className="vertical-timeline-element-title" style={{fontSize:'2em'}}>{item.title}</h3>
             <p>{item.date}</p>
             <h4 className="vertical-timeline-element-skill">{item.skill}</h4>
-            <ul className="text-start">
+            <ul className="text-start"> 
+              <img
+          src="https://picsum.photos/id/237/300"
+          alt="Example"
+          style={{ width: "40%", marginTop: "10px",marginRight:"20px", borderRadius: "5px" }}
+        />
+        <img
+          src="https://picsum.photos/id/237/300"
+          alt="Example"
+          style={{ width: "40%", marginTop: "10px", borderRadius: "5px" }}
+        />
+
             {item.description.map((desc, idx) => (
           <li key={idx}>{desc}</li>
         ))}
