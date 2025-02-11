@@ -13,7 +13,6 @@ const Contact = () => {
     // Handle form submission (e.g., send to an email service)
     alert('Message Sent!');
   };
-
   return (
     <section className="contact">
       <h2>Contact Me</h2>
