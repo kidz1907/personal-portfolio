@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, getDoc, setDoc, doc } from "firebase/firestore";
 import { db } from "./firebaseConfig";
 
 const getTimelineData = async () => {
@@ -20,4 +20,21 @@ const getTimelineData = async () => {
     }
 };
 
-export { getTimelineData };
+const getPortfolioData = async () => {
+    try {
+        const portfolioRef = doc(db, "portfolio", "basicInfo"); // Reference to "basicInfo" document
+        const snapshot = await getDoc(portfolioRef);
+
+        if (snapshot.exists()) {
+            console.log("Fetched Portfolio Data:", snapshot.data());
+            return snapshot.data();
+        } else {
+            console.log("No portfolio data found!");
+            return null;
+        }
+    } catch (error) {
+        console.error("Error fetching portfolio data:", error);
+        return null;
+    }
+};
+export { getTimelineData, getPortfolioData };
